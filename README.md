@@ -1,9 +1,7 @@
-当然可以 ✅
-下面是你可以直接上传到 **GitHub** 的 `README.md` 文件，
-已完全去除所有姓名、学号、课程代码等个人敏感信息，
-仅保留 **通用 IoT 工程项目描述（中英文双语版）**。
+<img width="386" height="289" alt="image" src="https://github.com/user-attachments/assets/ae7785f4-3fdb-4f0a-96a2-f8c9451ca45b" />
 
----
+<img width="941" height="213" alt="image" src="https://github.com/user-attachments/assets/7fa84293-feaa-4e6f-832c-33003c187a52" />
+
 
 # 🌡️ Smart Indoor Environment Monitor (BLE ↔ MQTT ↔ Cloud)
 
@@ -13,17 +11,21 @@ A 3-tier IoT system that monitors indoor temperature and humidity using **Arduin
 
 ---
 
-## 🧠 Project Overview / 项目概述
+## Project Overview / 项目概述
 
 This project demonstrates how to combine **BLE (Bluetooth Low Energy)** for local device communication and **MQTT** for cloud-based IoT message exchange.
 
 本项目展示了如何结合 **BLE 蓝牙低功耗通信** 与 **MQTT 云端通信协议**，构建一个完整的环境监控与控制系统。
 
 ---
+<img width="262" height="170" alt="image" src="https://github.com/user-attachments/assets/bb3b782d-93b8-4c34-b807-39622fdad508" />
+<img width="368" height="276" alt="image" src="https://github.com/user-attachments/assets/80e105ce-b638-4c64-ad07-3c7eb5b144a6" />
 
-## 🧩 System Architecture / 系统架构
 
-### 🕹️ Tier 1 – Device Layer (Arduino Nano 33 IoT)
+
+##  System Architecture / 系统架构
+
+### Tier 1 – Device Layer (Arduino Nano 33 IoT)
 
 | Component    | Function                                      |
 | ------------ | --------------------------------------------- |
@@ -38,7 +40,7 @@ Arduino 采集温湿度，判断环境状态并通过 BLE 发送数据到 Raspbe
 
 ---
 
-### 💻 Tier 2 – Network Layer (Raspberry Pi Gateway)
+###  Tier 2 – Network Layer (Raspberry Pi Gateway)
 
 | Component        | Description                                                     |
 | ---------------- | --------------------------------------------------------------- |
@@ -60,7 +62,7 @@ Flow:
 
 ---
 
-### ☁️ Tier 3 – Cloud Layer (AWS EC2 + MQTT Dashboard)
+###  Tier 3 – Cloud Layer (AWS EC2 + MQTT Dashboard)
 
 | Component                     | Function                                      |
 | ----------------------------- | --------------------------------------------- |
@@ -102,7 +104,7 @@ Expected output:
 [BLE → MQTT] {"temperature":25.2,"humidity":56.1,"status":"NORMAL"}
 ```
 
-### 3️⃣ AWS EC2 Broker
+### AWS EC2 Broker
 
 Start Mosquitto:
 
@@ -121,7 +123,7 @@ Connect using your MQTT client (e.g. MyMQTT, MQTT Explorer):
 
 ---
 
-## 🔄 Communication Flow / 通信流程
+## Communication Flow / 通信流程
 
 ### Upstream (数据上传)
 
@@ -137,7 +139,7 @@ Dashboard → MQTT → AWS → Raspberry Pi → BLE → Arduino
 
 ---
 
-## 📊 Example JSON Data
+##  Example JSON Data
 
 ```json
 {
@@ -149,7 +151,7 @@ Dashboard → MQTT → AWS → Raspberry Pi → BLE → Arduino
 
 ---
 
-## 🌍 Project Significance / 项目意义
+##  Project Significance / 项目意义
 
 * Demonstrates integration of BLE and MQTT in a multi-tier IoT architecture.
 * Enables real-time monitoring of environmental conditions and remote control of edge devices.
@@ -159,7 +161,7 @@ Dashboard → MQTT → AWS → Raspberry Pi → BLE → Arduino
 
 ---
 
-## 🧰 Technologies Used / 技术栈
+##  Technologies Used / 技术栈
 
 * **Hardware:** Arduino Nano 33 IoT, Raspberry Pi 4, DHT11 Sensor
 * **Protocols:** BLE, MQTT, JSON
@@ -168,20 +170,24 @@ Dashboard → MQTT → AWS → Raspberry Pi → BLE → Arduino
 
 ---
 
-## 📘 Keywords
+##  Keywords
 
 `IoT`  `BLE`  `MQTT`  `Raspberry Pi`  `Arduino Nano 33 IoT`
 `AWS EC2`  `Smart Environment`  `Sensor Monitoring`  `Python Bleak`  `paho-mqtt`
 
 ---
 
-⭐ **Tagline**
+ **Tagline**
 
 > “An IoT bridge connecting Arduino, Raspberry Pi, and the Cloud for real-time environmental monitoring.”
 
 > “一个连接 Arduino、树莓派与云端的物联网网关，用于实时环境监控。”
 
----
+<img width="494" height="53" alt="image" src="https://github.com/user-attachments/assets/2df17660-4ca5-4013-b8e3-15f9b620fb07" />
+<img width="704" height="376" alt="image" src="https://github.com/user-attachments/assets/87ab4339-7cda-431f-8db5-7db66fabe9b0" />
+<img width="249" height="187" alt="image" src="https://github.com/user-attachments/assets/4165df2c-ab89-404c-b1d8-729653ceb146" />
+<img width="814" height="613" alt="image" src="https://github.com/user-attachments/assets/b21d8a4b-46c8-4b3d-bbc1-c7763b7f09f8" />
 
-是否希望我帮你在这份 README 中自动生成一张简洁的系统结构图（Mermaid 代码或嵌图形式）以便在 GitHub 渲染？
-那样你的仓库会更专业（像一个真正的开源 IoT 项目）。
+
+
+
