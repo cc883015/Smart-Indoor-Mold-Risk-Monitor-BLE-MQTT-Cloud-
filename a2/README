@@ -1,0 +1,58 @@
+# 🌡️ Smart Indoor Mold-Risk Monitor (BLE ↔ MQTT ↔ Cloud)
+
+**Author:** CC
+**Stack:** Arduino Nano 33 IoT + DHT11 + RGB LED + Buzzer + Raspberry Pi (BLE↔MQTT) + AWS EC2 (Mosquitto)
+
+---
+
+## 🧠 Project Overview / 项目概述
+
+This project implements a **3-tier IoT system** for **indoor mold risk detection and alerting**, using:
+- **BLE (Bluetooth Low Energy)** for local wireless communication  
+- **MQTT (Message Queuing Telemetry Transport)** for cloud integration
+
+本项目是一个基于物联网（IoT）的**室内霉菌风险检测与告警系统**，采用：
+- **BLE 蓝牙低功耗协议** 实现设备层到边缘层通信  
+- **MQTT 协议** 实现云端数据传输与控制指令下发
+
+---
+
+## 🧩 System Architecture / 系统架构
+
+### 🕹️ Tier 1 – Device Layer (Arduino Nano 33 IoT)
+
+| Component | Function |
+|------------|-----------|
+| DHT11 Sensor | Measures temperature & humidity |
+| RGB LED | Green = Safe, Red = Alert |
+| Buzzer | Audio alarm when risk detected |
+| BLE Service | `sensorChar` for Notify, `commandChar` for Write |
+
+**Condition Logic:**
+- ✅ *Comfort (Green)*: 22–26 °C & 40–60% RH  
+- ⚠️ *Risk (Red)*: if T ≤ 19 °C or RH ≥ 70%
+
+**Arduino Role:**
+- Collect environmental data  
+- Send JSON sensor info via BLE Notify  
+- React to incoming BLE commands (LED ON/OFF)
+
+---
+
+### 💻 Tier 2 – Edge Layer (Raspberry Pi Gateway)
+
+| Component | Description |
+|------------|--------------|
+| **Bleak (Python)** | Connects to Arduino via BLE |
+| **paho-mqtt** | Publishes & subscribes messages to EC2 |
+| **MQTT Topics** | - `hotel/room1/sensor` (data)<br>- `hotel/room1/cmd` (commands) |
+
+**Process Flow:**
+1. Receive sensor JSON data via BLE  
+2. Publish to MQTT topic `hotel/room1/sensor`  
+3. Listen for commands from topic `hotel/room1/cmd`  
+4. Send commands to Arduino via BLE Write
+
+Example data:
+```json
+{"temperature":18.5,"humidity":75.2,"status":"ALERT"}
