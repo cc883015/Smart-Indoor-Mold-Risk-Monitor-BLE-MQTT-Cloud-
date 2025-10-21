@@ -5,7 +5,7 @@
 
 ---
 
-## 🧠 Project Overview / 项目概述
+## Project Overview / 项目概述
 
 This project implements a **3-tier IoT system** for **indoor mold risk detection and alerting**, using:
 - **BLE (Bluetooth Low Energy)** for local wireless communication  
@@ -17,9 +17,9 @@ This project implements a **3-tier IoT system** for **indoor mold risk detection
 
 ---
 
-## 🧩 System Architecture / 系统架构
+##  System Architecture / 系统架构
 
-### 🕹️ Tier 1 – Device Layer (Arduino Nano 33 IoT)
+###  Tier 1 – Device Layer (Arduino Nano 33 IoT)
 
 | Component | Function |
 |------------|-----------|
@@ -29,8 +29,8 @@ This project implements a **3-tier IoT system** for **indoor mold risk detection
 | BLE Service | `sensorChar` for Notify, `commandChar` for Write |
 
 **Condition Logic:**
-- ✅ *Comfort (Green)*: 22–26 °C & 40–60% RH  
-- ⚠️ *Risk (Red)*: if T ≤ 19 °C or RH ≥ 70%
+-  *Comfort (Green)*: 22–26 °C & 40–60% RH  
+-  *Risk (Red)*: if T ≤ 19 °C or RH ≥ 70%
 
 **Arduino Role:**
 - Collect environmental data  
@@ -39,7 +39,7 @@ This project implements a **3-tier IoT system** for **indoor mold risk detection
 
 ---
 
-### 💻 Tier 2 – Edge Layer (Raspberry Pi Gateway)
+###  Tier 2 – Edge Layer (Raspberry Pi Gateway)
 
 | Component | Description |
 |------------|--------------|
