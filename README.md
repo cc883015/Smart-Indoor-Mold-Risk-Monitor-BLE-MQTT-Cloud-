@@ -182,8 +182,11 @@ Dashboard → MQTT → AWS → Raspberry Pi → BLE → Arduino
 > “An IoT bridge connecting Arduino, Raspberry Pi, and the Cloud for real-time environmental monitoring.”
 
 > “一个连接 Arduino、树莓派与云端的物联网网关，用于实时环境监控。”
+<img width="1003" height="492" alt="image" src="https://github.com/user-attachments/assets/6cb99d16-bb17-4e01-8014-b6a53ab8c8d9" />
 
 <img width="494" height="53" alt="image" src="https://github.com/user-attachments/assets/2df17660-4ca5-4013-b8e3-15f9b620fb07" />
+<img width="968" height="478" alt="image" src="https://github.com/user-attachments/assets/4f2239e0-e69d-41b7-9996-e9f64428006f" />
+
 <img width="704" height="376" alt="image" src="https://github.com/user-attachments/assets/87ab4339-7cda-431f-8db5-7db66fabe9b0" />
 <img width="249" height="187" alt="image" src="https://github.com/user-attachments/assets/4165df2c-ab89-404c-b1d8-729653ceb146" />
 <img width="814" height="613" alt="image" src="https://github.com/user-attachments/assets/b21d8a4b-46c8-4b3d-bbc1-c7763b7f09f8" />
